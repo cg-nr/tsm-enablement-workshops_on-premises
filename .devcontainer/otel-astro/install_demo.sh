@@ -173,7 +173,7 @@ deploy_demo () {
 
    if [ -d "/workspace" ]; then
       kubectl --address 0.0.0.0 port-forward --pod-running-timeout=24h svc/newrelic-otel-frontendproxy 3000:8080 >> /dev/null &
-      gh codespace edit -c $CODESPACE_NAME -d 'newrelic-otel-astroshop'
+      gh codespace edit -c $CODESPACE_NAME -d 'newrelic-otel-astroshop-onsite'
       gh codespace ports visibility 3000:public -c $CODESPACE_NAME
       clear
       echo -e "\nAccess frontend via "https://$CODESPACE_NAME-3000.app.github.dev/""
