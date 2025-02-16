@@ -805,7 +805,7 @@ opentelemetry-collector:
           from_attribute: host.name
           action: upsert
         - key: k8s.cluster.name
-          value: newrelic-otel-astroshop
+          value: newrelic-otel-astroshop-onsite
           action: insert
       resource/collector:
         attributes:
